@@ -53,4 +53,4 @@ Sydney Life Aid has moved from page design into a working web app implementation
 
 Database design felt more like a design problem than just a technical problem. At first, I thought every piece of page content could become a data table. However, the technical feasibility review reminded us that data structures should support user behaviour, not exist only for completeness. If everything became dynamic, the MVP would become too complex. By separating core data from supporting data, I learned that good database design is not about having more tables, but about improving the core functions.
 
-These decisions were discussed and finalised together. All diagrams and code implementation were created collaboratively.
+These decisions were discussed and finalised together. All diagrams and code implementation were created collaboratively.The iteration from Figure 1 to Figure 3 referenced the user's technical feasibility review.
