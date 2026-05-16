@@ -1,15 +1,16 @@
-<li>
+<li class="post-card">
+    <a class="post-card-link" href="{{slug}}.html">
+        <span class="post-title">{{title}}</span>
 
-    <a href="{{slug}}.html">{{title}}</a>
+        <div class="post-card-meta">
+            <span class="date">{{date}}</span>
+            <span class="author">{{author}}</span>
+        </div>
 
-    <span class="date">{{date}}</span>
+        <p class="summary">{{summary}}</p>
 
-    <span class="author">{{author}}</span>
-
-    <p class="summary">{{summary}}</p>
-
-    <ul class="tags-list">
-        {{tags}}
-    </ul>
-
+        <ul class="tags-list">
+            {{tags}}
+        </ul>
+    </a>
 </li>

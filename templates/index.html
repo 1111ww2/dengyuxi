@@ -1,22 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>My Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuxi's DECO2017 Dev Blog</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
 
     <main>
+      <section class="hero">
+    <h1>Yuxi's DECO2017 Dev Blog</h1>
+    <p>
+        This blog documents the design and development process of Sydney Life Aid,
+        a task-oriented community web app that helps Chinese international students
+        in Sydney understand medical help, find places, and learn from peer experiences.
+    </p>
+</section>
 
-        <h1>Blog</h1>
-
-        <ul class="post-list">
+        <ul id="posts" class="post-list">
             {{postList}}
         </ul>
-
     </main>
+
+    <footer class="site-footer">
+        <p>Sydney Life Aid · Design process, implementation and reflection</p>
+    </footer>
 
 </body>
 

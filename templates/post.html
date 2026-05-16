@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/a11y-light.min.css" media="(prefers-color-scheme: light)">
@@ -11,26 +13,34 @@
 <body>
 
     <main>
-        <h1>{{title}}</h1>
-        <p class="date">{{date}}</p>
-        <p class="author">{{author}}</p>
+        <section class="post-hero">
+            <a class="back-link" href="index.html"> Back to all posts</a>
+            <h1>{{title}}</h1>
 
-        <hr>
-        <article>
+            <div class="post-meta">
+                <p class="date">{{date}}</p>
+                <p class="author">{{author}}</p>
+            </div>
+        </section>
 
-            <!-- BLOG CONTENT INSERTED HERE -->
-            {{content}}
+        <section class="post-shell">
+            <article>
+                {{content}}
+            </article>
 
-        </article>
-        <hr>
+            <hr>
 
-        <footer>
-            <ul class="tags-list">
-                {{tags}}
-            </ul>
-        </footer>
-
+            <footer>
+                <ul class="tags-list">
+                    {{tags}}
+                </ul>
+            </footer>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <p>Sydney Life Aid · Design process, implementation and reflection</p>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>

@@ -69,7 +69,7 @@ for (const file of fs.readdirSync(POSTS_DIR)) {
 }
 
 /* Create Blog Index */
-posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+posts.sort((a, b) => new Date(a.date) - new Date(b.date));
 
 const template = fs.readFileSync("templates/index.html", "utf8");
 
