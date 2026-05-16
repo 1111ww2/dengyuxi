@@ -4,6 +4,7 @@ date: 2026-05-09
 author: Yuxi Deng
 summary: How our group connected routes, controllers, SQLite, HTMX, and deployment considerations to turn Sydney Life Aid into a working web app prototype.
 tags:
+  - blog-5
   - Workflows
   - APIs discussion
   - Hosting and maintaining 
@@ -14,7 +15,7 @@ Week 10 helped me understand that a web app should not only stay as a local page
 
 ### Part 2: Database Reading, User Actions, and System Responses
 
-![](../assets/images/5.1.png)
+![](assets/images/5.1.png)
 
 Our technical choices were based on user tasks, not on showing technology for its own sake. Read-only functions use GET and SQLite queries. For example, `/task` reads tasks, `/community` reads peer experiences through search and task filters, and `/address` reads places. Write-based interactions use POST, such as `/release` for publishing, `/save-place/:id` for saving places, and like or comment routes for updating interaction data.
 
@@ -22,7 +23,7 @@ HTMX is used for small interactions such as saving, liking, commenting, and repl
 
 ### Part 3: Deployment, Integration, and Future Extension
 
-![](../assets/images/5.2.png)
+![](assets/images/5.2.png)
 
 Deployment needs to match the project type. A static website such as the A1/A3 blog can be published through GitHub Pages and GitHub Actions. However, Sydney Life Aid includes backend routes, SQLite, sessions, and user interactions. If it were published in the future, it would need a hosting environment that supports backend execution, rather than only GitHub Pages.
 
@@ -30,7 +31,7 @@ For integration, we did not include a real Map API in the MVP. Instead, we used 
 
 ### Part 4: Safety, Maintenance, and Implementation Adjustments
 
-![](../assets/images/5.3.png)
+![](assets/images/5.3.png)
 
 During implementation, we found that pages, routes, database fields, and partial views must stay consistent. Otherwise, pages may display correctly, but search, filtering, saving, or partial updates can fail. Therefore, we unified route names, field names, component structure, and CSS classes.
 

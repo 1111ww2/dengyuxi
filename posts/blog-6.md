@@ -4,6 +4,7 @@ date: 2026-05-16
 author: Yuxi Deng
 summary: How our group used testing, classroom feedback, accessibility checks, and safety considerations to evaluate and improve the Sydney Life Aid prototype.
 tags:
+  - blog-6
   - Testing strategies
   - System quality
   - User experience
@@ -14,13 +15,13 @@ Week 11 focused on evaluating a prototype through mechanical correctness, user e
 
 ### Part 2: Final Feature Decisions and Implementation
 
-![](../assets/images/6.1.png)
+![](assets/images/6.1.png)
 
 In the final MVP, we moved automatic recommendations, complex notifications, and multilingual translation into future scope. To avoid the website feeling like separate pages joined together, we unified cards, buttons, border radius, colours, page width, and responsive layout. The soft skin-tone palette and rounded design were used to make the platform feel warmer and more approachable. We also reorganised partial view names and reuse, so the final prototype felt more consistent.
 
 ### Part 3: Evaluation Plan and Testing Scope
 
-![](../assets/images/6.2.png)
+![](assets/images/6.2.png)
 
 Our testing plan was worked backwards from the real user path. It evaluates whether users can log in, browse tasks, filter experiences, find places, publish content, save, like, comment, and reply. The testing scope includes usability, content clarity, functional testing, database integrity, HTMX partial updates, accessibility, and safety.
 

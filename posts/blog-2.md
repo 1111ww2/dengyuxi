@@ -4,6 +4,7 @@ date: 2026-04-18
 author: Yuxi Deng
 summary: How our group shifted from a website mindset to a task-oriented web app, defined the core user flow, prioritised MVP features, and designed the page structure and interactions.
 tags:
+  - blog-2
   - User flow diagrams
   - Sitemaps
   - Wireframes
@@ -14,7 +15,7 @@ Week 7 helped me re-understand the difference between a website and a web app. B
 
 ### Part 2: User Tasks, Needs, and Feature Prioritisation
 
-![](../assets/images/2.1.png)
+![](assets/images/2.1.png)
 
 Our target users are Chinese international students in Sydney. When they feel unwell, injured, or unsure whether they need to see a doctor, they need to quickly judge what to do next. Therefore, we summarised the core task as: judge the situation — choose a task — read experiences — find a place — save information — participate in the community.
 
@@ -22,13 +23,13 @@ Based on this path, we analysed what functions users need and separated MVP core
 
 ### Part 3: Overall Website Page Structure
 
-![](../assets/images/2.2.png)
+![](assets/images/2.2.png)
 
 To support the core functions, we built the page structure from the user task path. The Home / Task Page is the core entry point for browsing medical tasks. The Community Page supports reading and searching peer experiences. The Post Detail Page shows full posts and interactions. The Release Page supports publishing questions or experiences. The Address Page helps users find GP, pharmacy, or emergency locations. The Settings Page manages personal information, saved places, and interaction records.
 
 ### Part 4: Website Flow and User Action Responses
 
-![](../assets/images/2.3.png)
+![](assets/images/2.3.png)
 
 The Web Flow Diagram shows the complete flow from entry point to action. The wireframe flow explains how user actions trigger system responses. For example, after users click a task card, the system enters the related Community Page and filters posts. After searching or filtering, the post list updates. After clicking a post, users enter the Post Detail Page. After clicking save place, the place is saved to the personal page. After submitting a question, a new question card is generated.
 

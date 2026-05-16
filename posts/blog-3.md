@@ -4,6 +4,7 @@ date: 2026-04-26
 author: Yuxi Deng
 summary: How our group used modular design to organise Sydney Life Aid with a shared layout, reusable components, partial views, and clearer teamwork.
 tags:
+  - blog-3
   - Design system
   - Reusable components
   - Modular code structure
@@ -14,7 +15,7 @@ Week 8 helped me understand that a web app needs modular design because many pag
 
 ### Part 2: Layout and Wireframes
 
-![](../assets/images/3.1.png)
+![](assets/images/3.1.png)
 
 Following Week 8’s modular design idea, we divided the page structure into layout and partial views. The layout is the shared skeleton of the website, while partial views are reusable components that can be inserted into different pages and support HTMX partial updates.
 
@@ -22,7 +23,7 @@ We created wireframes to show the main pages and user task path. Users enter thr
 
 ### Part 3: Trade-offs and Components
 
-![](../assets/images/3.2.png)
+![](assets/images/3.2.png)
 
 After deciding the page structure, we reflected on the trade-offs of modular design. Shared navigation, reusable cards, shared CSS, and database relationships improve consistency. However, modularity also has limits. A unified navigation may weaken the main task path, different cards need different data fields, and HTMX partial updates depend on stable controller data. Therefore, we needed consistent database fields, component names, and CSS classes.
 
@@ -30,7 +31,7 @@ We transformed user needs into reusable components, including Header / Navigatio
 
 ### Part 4: Teamwork and Implementation
 
-![](../assets/images/3.3.png)
+![](assets/images/3.3.png)
 
 We divided the work by the user journey rather than randomly splitting pages. Yufei worked on the Task Flow / Preparation Module, focusing on task entry, pathways, and preparation steps. I worked on the Place / Community / Experience Module, focusing on places, peer experiences, questions, publishing, and saving functions. We also unified component naming, CSS, page style, and data fields so the site worked as one web application.
 
