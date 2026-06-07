@@ -32,6 +32,8 @@ At the same time, user experience testing revealed important weaknesses. The log
 
 ![](assets/images/7.2.png)
 
+### Evidence and process
+
 <style>
 /* Blog 7: force the testing-summary pages to stay in one horizontal swipe row after publishing */
 .pdf-slider {
