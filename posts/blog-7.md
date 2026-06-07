@@ -1,5 +1,5 @@
 ---
-title: From Running Correctly to Truly Supporting User Action
+title: Reflection-From Running Correctly to Truly Supporting User Action
 date: 2026-06-07
 author: Yuxi Deng
 summary: A final reflection on Sydney Life Aid, focusing on performance, user experience, functional requirements, testing limits, and future improvements.
