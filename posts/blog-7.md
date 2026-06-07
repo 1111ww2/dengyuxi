@@ -26,6 +26,59 @@ Testing results show that users can understand the basic purpose of the platform
 
 ![](assets/images/7.2.png)
 
+<style>
+/* Blog 7: force the testing-summary pages to stay in one horizontal swipe row after publishing */
+.pdf-slider {
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: rgba(255, 253, 251, 0.9);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.pdf-scroll {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto !important;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.25rem 0 1rem;
+}
+
+.pdf-scroll img {
+  display: block !important;
+  flex: 0 0 92% !important;
+  width: 92% !important;
+  min-width: 92% !important;
+  max-width: 92% !important;
+  height: auto !important;
+  margin: 0 !important;
+  scroll-snap-align: center;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+@media (min-width: 900px) {
+  .pdf-scroll img {
+    flex-basis: 82% !important;
+    width: 82% !important;
+    min-width: 82% !important;
+    max-width: 82% !important;
+  }
+}
+</style>
+
 <div class="pdf-slider" aria-label="Testing summary image gallery">
   <div class="pdf-scroll">
     <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_01.png" alt="Testing Summary page 01">
