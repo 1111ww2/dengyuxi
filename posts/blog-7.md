@@ -1,0 +1,66 @@
+---
+title: From Running Correctly to Truly Supporting User Action
+date: 2026-06-07
+author: Yuxi Deng
+summary: A final reflection on Sydney Life Aid, focusing on performance, user experience, functional requirements, testing limits, and future improvements.
+tags:
+  - blog-7
+  - Final reflection
+  - Performance
+  - User experience
+  - Future improvements
+---
+Sydney Life Aid is a help platform for Chinese international students in Sydney who need support with seeing a doctor. It is built around “See a doctor in Sydney” as a task-oriented community hub. It transforms a vague, anxious, and fragmented real-life problem into an action process that can be understood, searched, supported by peer experiences, and continuously enriched by the community.
+
+### Performance
+
+From a technical perspective, the basic operation of Sydney Life Aid is stable. We used Mojo.js, TypeScript, SQLite, HTMX, and an MVC structure to separate page presentation, route control, database models, and partial interactions. According to the testing records, the project can complete `npm install`, `npm run seed`, and `npm run dev`, and it can open locally without obvious 404, 500, or routing errors in the main navigation. TypeScript check, lint check, model test, and route test also prove that the core code structure has a level of reliability. In particular, database-related tests show that publishing posts, commenting, replying, liking, saving places, and user permissions are not only temporary page displays, but can be persistently stored through SQLite. This process helped me truly understand the meaning of “mechanical correctness” in Week 11. Testing is not used to prove that the work is perfect, but to locate the conditions under which the system still runs correctly. However, this stability also has clear boundaries:
+
+![](assets/images/7.1.png)
+
+### User Experience
+
+The biggest strength of Sydney Life Aid is that it organises content around user tasks. The Home page uses a task pathway to help users understand the general steps of seeing a doctor. The Address page presents GP, pharmacy, emergency, and student support locations in one place. The Community page allows users to read peer experiences. The Release page allows users to publish their own questions or experiences. The Settings page stores users’ personal information, posts, liked content, and saved places. The user testing scenario was set as a Chinese international student in Sydney feeling unwell and needing to know how to see a doctor, where to go, and what to prepare. This scenario closely matches the original target users and is more valuable than simply checking whether buttons can be clicked.
+
+Testing results show that users can understand the basic purpose of the platform and complete core tasks such as browsing the flow, finding places, reading experiences, saving places, and simulating publishing. This shows that the direction proposed in the Dev Blog stage - helping Chinese international students reduce anxiety around the medical process - is valid. The Chinese-English switch is also an important design decision, because the target users may not fully understand English terminology in the Australian healthcare system. Through the bilingual interface, the platform becomes more inclusive in terms of information understanding and better fits the real situation of the target community. However, the user experience is not without problems. This is something I should address if I continue development. A better design should allow users with different language abilities, different levels of technical familiarity, and different levels of anxiety to understand and act with ease.
+
+![](assets/images/7.2.png)
+
+<div class="pdf-slider" aria-label="Testing summary image gallery">
+  <div class="pdf-scroll">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_01.png" alt="Testing Summary page 01">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_02.png" alt="Testing Summary page 02">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_03.png" alt="Testing Summary page 03">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_04.png" alt="Testing Summary page 04">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_05.png" alt="Testing Summary page 05">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_06.png" alt="Testing Summary page 06">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_07.png" alt="Testing Summary page 07">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_08.png" alt="Testing Summary page 08">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_09.png" alt="Testing Summary page 09">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_10.png" alt="Testing Summary page 10">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_11.png" alt="Testing Summary page 11">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_12.png" alt="Testing Summary page 12">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_13.png" alt="Testing Summary page 13">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_14.png" alt="Testing Summary page 14">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_15.png" alt="Testing Summary page 15">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_16.png" alt="Testing Summary page 16">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_17.png" alt="Testing Summary page 17">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_18.png" alt="Testing Summary page 18">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_19.png" alt="Testing Summary page 19">
+    <img src="assets/images/blog-7-pdf/Testing%20Summary%20Final%20%282%29_20.png" alt="Testing Summary page 20">
+  </div>
+</div>
+
+### Functional Requirements
+
+I think the most successful part of the project was controlling the scope in time. The final MVP kept the most important user paths: understanding the process, finding places, reading experiences, publishing content, and managing personal information. This reduction was necessary. If we continued to expand functions, the project could easily become a messy information platform and lose the core value of being task-oriented. The AI Statement also records that we used AI to analyse page structure and judge which functions should be kept, merged, or removed (AI declarations - https://drive.google.com/file/d/1ltcNttOS24i8r1Vs5I15XodBI5PUE8X2/view), but the final design judgement still came from our understanding of the target users and project scope. At the same time, I also realised that the original functional requirements still had incomplete aspects:
+
+![](assets/images/7.3.png)
+
+If I continue development, I would prioritise three types of improvements:
+
+![](assets/images/7.4.png)
+
+### Lessons Learned
+
+Web development is not simply about making an interface. It is about turning a complex problem into an action pathway that can be supported by a system. A1 Dev Blog helped me learn how to define the problem. A2 Web App Prototype helped me turn the problem into a prototype. A3 Reflection helped me look back and judge whether the prototype was truly effective. Sydney Life Aid is still only a course-scope prototype, but it has already proved an important direction: for Chinese international students who are unfamiliar with the local healthcare system, what is truly helpful is not more scattered information, but clear steps, trustworthy places, peer experiences that can be referenced, and a structured platform that helps them move from anxiety to action.

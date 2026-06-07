@@ -375,3 +375,38 @@ hr {
     width: min(100%, calc(100vw - 1rem));
   }
 }
+/* Blog 7 horizontal PDF image gallery */
+.pdf-slider {
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: rgba(255, 253, 251, 0.9);
+  box-shadow: var(--shadow-card);
+}
+
+.pdf-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0.25rem 0 0.9rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+article .pdf-scroll img {
+  flex: 0 0 92%;
+  width: 92%;
+  max-width: 92%;
+  height: auto;
+  margin: 0;
+  scroll-snap-align: center;
+}
+
+@media (min-width: 900px) {
+  article .pdf-scroll img {
+    flex-basis: 82%;
+    width: 82%;
+    max-width: 82%;
+  }
+}
